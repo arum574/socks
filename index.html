@@ -22,7 +22,11 @@
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- Solid black, not black-translucent: translucent lets the page
+       background show through the status bar, and the app only paints
+       inside the safe area. -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-title" content="Options">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -32,6 +36,9 @@
 
   <title>Options Tracker</title>
   <link rel="manifest" href="manifest.json">
+  <!-- Matches AppColors.background, so no white shows around the app or
+       while it loads. -->
+  <style>html, body { background: #000000; }</style>
 </head>
 <body>
   <!--
